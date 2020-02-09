@@ -8,10 +8,10 @@ jenkins
 Ansible galaxy:
 ---------------
 
-[https://galaxy.ansible.com/devops-toolbox.jenkins](https://galaxy.ansible.com/devops-toolbox.jenkins)
+[https://galaxy.ansible.com/devopstoolbox.jenkins](https://galaxy.ansible.com/devopstoolbox.jenkins)
 
 ```bash
-ansible-galaxy install devops-toolbox.jenkins
+ansible-galaxy install devopstoolbox.jenkins
 ```
 
 Requirements
@@ -51,7 +51,7 @@ Example Playbook
   tasks:
     - name: jenkins is configured
       import_role:
-        name: devops-toolbox.jenkins
+        name: devopstoolbox.jenkins
       vars:
         jenkins_service_port: 8081
         jenkins_display_admin_password: true
@@ -72,4 +72,4 @@ MIT
 Author Information
 ------------------
 
-- [Mihai Criveti](https://www.linkedin.com/in/devops-toolbox.)
+- [Mihai Criveti](https://www.linkedin.com/in/devopstoolbox.)
