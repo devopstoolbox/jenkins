@@ -1,0 +1,10 @@
+---
+# Template configuration files for jenkins
+
+- name: template is copied
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+  become: true
+  loop: "{{ jenkins_templates_copy }}"
+  when: jenkins_copy_templates

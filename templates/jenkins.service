@@ -1,0 +1,27 @@
+[Unit]
+Documentation=man:systemd-sysv-generator(8)
+SourcePath=/etc/rc.d/init.d/jenkins
+Description=LSB: Jenkins Automation Server
+After=remote-fs.target
+After=network-online.target
+After=time-sync.target
+After=nss-lookup.target
+After=time-sync.target
+After=sendmail.service
+Wants=network-online.target
+
+[Service]
+Type=forking
+Restart=no
+TimeoutSec=5min
+IgnoreSIGPIPE=no
+KillMode=process
+GuessMainPID=no
+RemainAfterExit=yes
+SuccessExitStatus=5 6
+ExecStart=/etc/rc.d/init.d/jenkins start
+ExecStop=/etc/rc.d/init.d/jenkins stop
+ExecReload=/etc/rc.d/init.d/jenkins reload
+
+[Install]
+WantedBy=multi-user.target

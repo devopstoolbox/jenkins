@@ -1,0 +1,12 @@
+---
+# defaults file for jenkins
+
+# Jenkins port
+jenkins_service_port: 8081
+jenkins_display_admin_password: true
+jenkins_enable_service: true
+jenkins_enable_selinux: true
+jenkins_copy_templates: true
+jenkins_firewall_configure: true
+jenkins_firewall_rules:
+  - port: 8081

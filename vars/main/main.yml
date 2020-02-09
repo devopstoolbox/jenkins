@@ -1,0 +1,44 @@
+---
+# vars file for packages
+
+# Detected OS
+my_os: "{{ ansible_distribution }}_{{ ansible_distribution_major_version }}"
+
+# Repos create
+jenkins_repos_create: "{{ _jenkins_repos_create['all']
+  | union ( _jenkins_repos_create[my_os]
+  | default([]) ) }}"
+
+# Repos download
+jenkins_repos_download: "{{ _jenkins_repos_download['all']
+  | union ( _jenkins_repos_download[my_os]
+  | default([]) ) }}"
+
+# Templates Copy
+jenkins_templates_copy: "{{ _jenkins_templates_copy['all']
+  | union ( _jenkins_templates_copy[my_os]
+  | default([]) ) }}"
+
+# Services Enable
+jenkins_services_enable: "{{ _jenkins_services_enable['all']
+  | union ( _jenkins_services_enable[my_os]
+  | default([]) ) }}"
+
+# SELinux Enable
+jenkins_selinux_enable: "{{ _jenkins_selinux_enable['all']
+  | union ( _jenkins_selinux_enable[my_os]
+  | default([]) ) }}"
+
+# Packages lists
+jenkins_packages_remove: "{{ _jenkins_packages_remove['all']
+  | union ( _jenkins_packages_remove[my_os]
+  | default([]) ) }}"
+jenkins_packages_repos: "{{ _jenkins_packages_repos['all']
+  | union ( _jenkins_packages_repos[my_os]
+  | default([]) ) }}"
+jenkins_packages_prereq: "{{ _jenkins_packages_prereq['all']
+  | union ( _jenkins_packages_prereq[my_os]
+  | default([]) ) }}"
+jenkins_packages_install: "{{ _jenkins_packages_install['all']
+  | union ( _jenkins_packages_install[my_os]
+  | default([]) ) }}"

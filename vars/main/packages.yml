@@ -1,0 +1,25 @@
+---
+# Install packages
+_jenkins_packages_install:
+  all:
+    - jenkins
+  CentOS_7:
+    - java
+    - initscripts
+  RedHat_7:
+    - java
+    - initscripts
+  CentOS_8:
+    - java
+    - initscripts
+  RedHat_8:
+    - java
+    - initscripts
+  Fedora_31:
+    - java
+    - initscripts
+    - chkconfig
+  Debian_10:
+    - default-jdk
+  Ubuntu_18:
+    - default-jdk

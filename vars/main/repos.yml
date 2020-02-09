@@ -1,0 +1,50 @@
+---
+# vars file for packages
+
+# Repo files to create
+_jenkins_repos_create:
+  all: []
+  CentOS_7: []
+  RedHat_7: []
+  CentOS_8: []
+  RedHat_8: []
+  Fedora_31: []
+  Debian_10:
+    - repo: "deb https://pkg.jenkins.io/debian-stable binary/"
+      gpgkey: "https://pkg.jenkins.io/debian/jenkins.io.key"
+      filename: "/etc/apt/sources.list.d/jenkins.list"
+  Ubuntu_18:
+    - repo: "deb https://pkg.jenkins.io/debian-stable binary/"
+      gpgkey: "https://pkg.jenkins.io/debian/jenkins.io.key"
+      filename: "/etc/apt/sources.list.d/jenkins.list"
+
+# Repo files to download
+_jenkins_repos_download:
+  all: []
+  CentOS_7:
+    - url: "https://pkg.jenkins.io/redhat-stable/jenkins.repo"
+      checksum: "sha256:9d836919c158c4189aae93e892f3ff4ceea25a23ac352dc2df26494286ea146c"
+      dest: "/etc/yum.repos.d/jenkins.repo"
+      gpgkey: "https://jenkins-ci.org/redhat/jenkins-ci.org.key"
+  RedHat_7:
+    - url: "https://pkg.jenkins.io/redhat-stable/jenkins.repo"
+      checksum: "sha256:9d836919c158c4189aae93e892f3ff4ceea25a23ac352dc2df26494286ea146c"
+      dest: "/etc/yum.repos.d/jenkins.repo"
+      gpgkey: "https://jenkins-ci.org/redhat/jenkins-ci.org.key"
+  CentOS_8:
+    - url: "https://pkg.jenkins.io/redhat-stable/jenkins.repo"
+      sha256: "sha256:9d836919c158c4189aae93e892f3ff4ceea25a23ac352dc2df26494286ea146c"
+      dest: "/etc/yum.repos.d/jenkins.repo"
+      gpgkey: "https://jenkins-ci.org/redhat/jenkins-ci.org.key"
+  RedHat_8:
+    - url: "https://pkg.jenkins.io/redhat-stable/jenkins.repo"
+      sha256: "sha256:9d836919c158c4189aae93e892f3ff4ceea25a23ac352dc2df26494286ea146c"
+      dest: "/etc/yum.repos.d/jenkins.repo"
+      gpgkey: "https://jenkins-ci.org/redhat/jenkins-ci.org.key"
+  Fedora_31:
+    - url: "https://pkg.jenkins.io/redhat-stable/jenkins.repo"
+      sha256: "sha256:9d836919c158c4189aae93e892f3ff4ceea25a23ac352dc2df26494286ea146c"
+      dest: "/etc/yum.repos.d/jenkins.repo"
+      gpgkey: "https://jenkins-ci.org/redhat/jenkins-ci.org.key"
+  Debian_10: []
+  Ubuntu_18: []

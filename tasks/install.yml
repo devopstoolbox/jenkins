@@ -1,0 +1,8 @@
+---
+# Install jenkins packages
+
+- name: packages are installed
+  package:
+    name: "{{ jenkins_packages_install }}"
+    state: present
+  become: true

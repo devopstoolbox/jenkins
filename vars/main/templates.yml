@@ -1,0 +1,25 @@
+---
+# Configuration templates to copy
+_jenkins_templates_copy:
+  all: []
+  CentOS_7:
+    - src: jenkins.redhat
+      dest: /etc/sysconfig/jenkins
+  RedHat_7:
+    - src: jenkins.redhat
+      dest: /etc/sysconfig/jenkins
+  CentOS_8:
+    - src: jenkins.redhat
+      dest: /etc/sysconfig/jenkins
+  RedHat_8:
+    - src: jenkins.redhat
+      dest: /etc/sysconfig/jenkins
+  Fedora_31:
+    - src: jenkins.redhat
+      dest: /etc/sysconfig/jenkins
+  Debian_10:
+    - src: jenkins.debian
+      dest: /etc/default/jenkins
+  Ubuntu_18:
+    - src: jenkins.debian
+      dest: /etc/default/jenkins
